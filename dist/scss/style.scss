@@ -1,0 +1,845 @@
+//colors
+$color_emerald_approx: #43bf87;
+$black_25: rgba(0, 0, 0, 0.25);
+$white: #fff;
+$red: red;
+$blue: blue;
+$color_nobel_approx: #b3b3b3;
+$color_emerald_80_approx: rgba(67, 191, 135, 0.8);
+$color_mine_shaft_approx: #333;
+$color_tuna_approx: #323a45;
+$color_emerald_50_approx: rgba(67, 191, 135, 0.5);
+$color_tundora_approx: #444;
+$white_20: rgba(255, 255, 255, 0.2);
+$color_gallery_approx: #eee;
+$color_chambray_approx: #3a5795;
+$color_picton_blue_approx: #55acee;
+$color_punch_approx: #d73d32;
+$color_rose_approx: #ff0085;
+$white_70: rgba(255, 255, 255, 0.7);
+$black: #000;
+$color_cararra_approx: #ececec;
+$white_50: rgba(255, 255, 255, 0.5);
+$color_pink_swan_82_approx: rgba(187, 187, 187, 0.82);
+$color_celeste_approx: #cecece;
+$color_dune_approx: #3a3936;
+$color_burnt_umber_approx: #903823;
+$color_lochmara_approx: #0084c4;
+$color_haiti_approx: #1a1b36;
+$color_golden_tainoi_approx: #fad157;
+$color_java_approx: #14b9d6;
+$color_cornflower_approx: #96d1f8;
+$color_danube_approx: #65a9d7;
+$black_40: rgba(0, 0, 0, 0.4);
+
+//fonts
+$font_0: CaviarDreams;
+$font_1: Georgia;
+$font_2: serif;
+
+//urls
+$url_0: url(../libs/fonts/CaviarDreams.ttf);
+$url_1: url(../images/head-detail-team-bg.jpg);
+
+//@extend-elements
+//original selectors
+//.social .fa-facebook:hover, .social .fa-twitter:hover, .social .fa-google-plus:hover, .social .fa-vine:hover, .social .fa-flickr:hover
+%extend_1 {
+	padding: 5px;
+	background: $white;
+	font-size: 15px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+}
+
+//original selectors
+//.detail-news h2, h3
+%extend_2 {
+	color: $color_emerald_approx;
+	font-weight: bolder;
+	text-transform: capitalize;
+}
+
+//original selectors
+//.ind, .brz, .nyk, .phi, .bru, .blu
+%extend_3 {
+	color: $white;
+	padding: 5px 10px;
+	font-weight: bolder;
+	font-size: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	display: inline;
+}
+
+//original selectors
+//.copyright, .copyright a
+%extend_4 {
+	text-align: center;
+	text-decoration: none;
+	color: $white;
+	font-size: 0.9vw;
+	padding: 5px;
+}
+
+
+.social {
+	position: absolute;
+	bottom: 32px;
+	font-size: 20px;
+	padding-top: 6px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 2px;
+	.fa-facebook {
+		padding: 5px;
+		&:hover {
+			@extend %extend_1;
+			color: $color_chambray_approx;
+			padding: 5px;
+			background: $white;
+			font-size: 15px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 5px;
+		}
+	}
+	.fa-twitter {
+		padding: 5px;
+		&:hover {
+			@extend %extend_1;
+			color: $color_picton_blue_approx;
+		}
+	}
+	.fa-google-plus {
+		padding: 5px;
+		&:hover {
+			@extend %extend_1;
+			color: $color_punch_approx;
+		}
+	}
+	.fa-vine {
+		padding: 5px;
+		&:hover {
+			@extend %extend_1;
+			color: $color_picton_blue_approx;
+		}
+	}
+	.fa-flickr {
+		padding: 5px;
+		&:hover {
+			@extend %extend_1;
+			color: $color_rose_approx;
+		}
+	}
+	ul {
+		margin: 0;
+		padding: 5px;
+		width: 100%;
+		margin-left: -20px;
+		margin-top: -10px;
+		li i {
+			font-size: 16px;
+		}
+	}
+}
+.detail-news {
+	margin-bottom: 10px;
+	background: $white_70;
+	padding: 10px;
+	color: $black;
+	font-weight: bold;
+	text-align: justify;
+	h2 {
+		@extend %extend_2;
+	}
+	h3 {
+		margin-left: -15px;
+	}
+}
+h3 {
+	@extend %extend_2;
+}
+.ind {
+	@extend %extend_3;
+	background-color: $color_burnt_umber_approx;
+}
+.brz {
+	@extend %extend_3;
+	background-color: $color_lochmara_approx;
+}
+.nyk {
+	@extend %extend_3;
+	background-color: $color_haiti_approx;
+}
+.phi {
+	@extend %extend_3;
+	background-color: $color_golden_tainoi_approx;
+}
+.bru {
+	@extend %extend_3;
+	background-color: $color_emerald_approx;
+}
+.blu {
+	@extend %extend_3;
+	background-color: $color_java_approx;
+}
+.copyright {
+	@extend %extend_4;
+	a {
+		@extend %extend_4;
+	}
+}
+@font-face {
+	font-family: $font_0;
+	src: $url_0;
+}
+.clear {
+	clear: both;
+}
+* {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+}
+.red {
+	color: $red;
+}
+.blue {
+	color: $blue;
+}
+.canvas-outer {
+	overflow: hidden;
+	position: relative;
+}
+.tag {
+	color: $color_emerald_approx;
+	position: absolute;
+	top: 10px;
+	text-transform: capitalize;
+	i {
+		width: 100%;
+		display: inline;
+	}
+	span {
+		color: $white;
+		margin-left: 5px;
+		font-family: $font_0;
+	}
+}
+.nav-btn {
+	color: $white;
+	height: 2.8125rem;
+	line-height: 2.0625rem;
+	padding: 0;
+	position: absolute;
+	text-indent: 2.1875rem;
+	width: 3.8125rem;
+	top: 0;
+	overflow: hidden;
+	right: 0;
+	span {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 10px 0 1px $color_emerald_approx, 0 16px 0 1px $color_emerald_approx, 0 22px 0 1px $color_emerald_approx;
+		display: block;
+		height: 0.1em;
+		right: 1.8125rem;
+		position: absolute;
+		top: 0.3125rem;
+		width: 0.1rem;
+	}
+	&:hover {
+		cursor: pointer;
+		span {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 10px 0 1px $color_nobel_approx, 0 16px 0 1px $color_nobel_approx, 0 22px 0 1px $color_nobel_approx;
+		}
+	}
+}
+.nav-brand {
+	text-align: center;
+	font-size: 2em;
+	color: $color_emerald_approx;
+	width: 100%;
+	display: inline-block;
+	height: 42px;
+	&:hover {
+		color: $color_emerald_80_approx;
+	}
+}
+.rotate {
+	animation: rotate-auto 5s infinite linear;
+}
+@-webkit-keyframes rotate {
+	0% {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(0deg);
+	}
+	100% {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(360deg);
+	}
+}
+@keyframes rotate-auto {
+	0% {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(0deg);
+	}
+	100% {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(360deg);
+	}
+}
+.navigate {
+	width: 80%;
+}
+.nav-wrap {
+	background: $color_mine_shaft_approx;
+	height: 100%;
+	overflow: hidden;
+	font-size: 1em;
+	font-family: $font_0;
+	z-index: 9999;
+	background: $color_tuna_approx;
+	a:hover {
+		color: $color_emerald_50_approx;
+	}
+}
+.fixToTop {
+	position: fixed;
+	width: 100%;
+	background: $color_tuna_approx;
+	padding-left: 15px;
+	z-index: 9999;
+}
+.nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	z-index: 9999;
+	.fa {
+		margin-right: 10px;
+		color: $color_emerald_approx;
+	}
+	&:before {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+	> li {
+		border-top: 1px solid $color_tundora_approx;
+		&.search-form {
+			padding: 5px 15px;
+			position: relative;
+			input {
+				background-color: $white_20;
+				border: 0 none;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 30px;
+				color: $white;
+				font-size: 14px;
+				outline: medium none;
+				padding: 5px 15px 5px 26px;
+				width: 100%;
+				font-style: italic;
+			}
+			&:after {
+				content: " ";
+				height: 17px;
+				width: 17px;
+				left: 22px;
+				top: 50%;
+				margin-top: -7px;
+				position: absolute;
+				background-size: 16px;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 20px;
+			}
+		}
+	}
+	a {
+		color: $white;
+	}
+	li a:hover {
+		background: $white;
+		color: $color_emerald_approx;
+		font-weight: bolder;
+		background-color: $white;
+	}
+}
+.social-right {
+	width: 100%;
+	text-align: center;
+	a i {
+		margin: 10px 30px;
+	}
+}
+.canvas-inner {
+	position: relative;
+	right: 0;
+}
+.transform3d {
+	.canvas-inner {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 500ms ease 0s;
+	}
+	.nav-push .canvas-inner {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all 0.3s ease;
+	}
+}
+@media all and(min-width: 300px) {
+	.item {
+		width: 100%;
+		height: 150px;
+		img {
+			height: 150px;
+		}
+	}
+	.detail-news h2 {
+		margin-top: 25px;
+	}
+	.decrip-team h2 {
+		color: $color_emerald_approx;
+		text-align: left;
+		font-size: 3vw;
+	}
+}
+@media all and(min-width: 768px) {
+	.item {
+		width: 100%;
+		height: 100%;
+		img {
+			height: auto;
+		}
+	}
+	.nav-wrap {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: inset -1.5em 0 1.5em -0.75em $black_25;
+		font-size: 1em;
+	}
+	.detail-news h2 {
+		margin-top: 65px;
+	}
+	.decrip-team h2 {
+		color: $color_emerald_approx;
+		text-align: left;
+	}
+}
+.header {
+	background: $color_tuna_approx;
+}
+section {
+	margin-top: 52px;
+}
+.date {
+	position: absolute;
+	background: $color_emerald_approx;
+	padding: 6px;
+	font-weight: bolder;
+	color: $white;
+	top: 0;
+	width: 20%;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2vw;
+	font-family: $font_0;
+	z-index: 1;
+}
+.sport {
+	margin-bottom: 2em;
+	.info {
+		padding: 1em;
+		background-color: $color_gallery_approx;
+	}
+}
+.info {
+	h2 {
+		margin-top: -6px;
+	}
+	a {
+		text-decoration: none;
+		color: $color_emerald_approx;
+	}
+}
+.max-lines {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-height: 1.8em;
+	white-space: nowrap;
+}
+.share {
+	position: relative;
+	overflow: hidden;
+}
+.shareicon {
+	position: absolute;
+	text-align: right;
+	right: 15px;
+	bottom: 10px;
+	i {
+		display: inline-block;
+		padding-top: 6px;
+		font-size: 16px;
+		text-align: center;
+		width: 32px;
+		height: 32px;
+		border: 2px solid $color_emerald_approx;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		color: $color_emerald_approx;
+	}
+}
+.pagination {
+	text-align: center;
+	width: 100%;
+	.btn {
+		background-color: $color_gallery_approx;
+		i {
+			color: $color_emerald_approx;
+		}
+	}
+}
+.line {
+	border-bottom: 1px solid $black;
+	padding: 10px;
+}
+#demo {
+	padding-top: 15px;
+}
+.item {
+	h4 {
+		text-transform: uppercase;
+		text-align: center;
+		top: 0;
+		font-weight: bold;
+		color: $color_emerald_approx;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 2px 2px 4px $color_cararra_approx;
+	}
+	img {
+		width: 100%;
+	}
+}
+.single-prev-next {
+	float: right;
+	font-size: 1.5vw;
+	overflow: hidden;
+	margin-right: 15px;
+	margin-top: 10px;
+	a {
+		color: $color_emerald_approx;
+		text-decoration: none;
+		padding-left: 10px;
+		i {
+			margin-right: 3px;
+		}
+	}
+}
+.right-arrow {
+	a {
+		float: right;
+	}
+	i {
+		margin-right: 15px;
+	}
+}
+#zoomIn {
+	position: relative;
+	margin-bottom: 15px;
+	.detail {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		bottom: 20px;
+		left: 20px;
+		z-index: 1000;
+		color: $white;
+		p {
+			top: 20px;
+			right: 20px;
+			bottom: 20px;
+			left: 20px;
+		}
+	}
+	&:hover .detail {
+		top: 20px;
+		right: 20px;
+		bottom: 20px;
+		left: 20px;
+		border: 1px solid $white;
+		padding: 20px;
+		font-size: 1vw;
+		background: $white_50;
+	}
+}
+.border-team {
+	padding: 5px;
+	margin: 10px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 0 10px 2px $color_pink_swan_82_approx;
+}
+.team {
+	border: 1px solid $color_celeste_approx;
+	padding: 5px;
+	margin: 10px;
+}
+.line-team {
+	border-bottom: 1px solid $color_celeste_approx;
+	margin-bottom: 10px;
+}
+.decrip-team {
+	margin-top: -15px;
+	p {
+		text-overflow: ellipsis;
+		overflow: hidden;
+		line-height: 1.8em;
+		white-space: nowrap;
+	}
+	a {
+		text-decoration: none;
+		color: $color_emerald_approx;
+	}
+}
+.banner-detail-team {
+	background-attachment: fixed;
+	background-image: $url_1;
+	background-size: cover;
+	width: 100%;
+	height: 677px;
+	margin-top: -11px;
+	padding-top: 300px;
+}
+.content-detail-team {
+	background-color: $white;
+	position: relative;
+	height: 377px;
+	img {
+		margin-top: 100px;
+		height: 50%;
+		width: 50%;
+		display: inline-block;
+		text-align: center;
+	}
+}
+.avatar-player {
+	text-align: center;
+	display: inline-block;
+	padding: 10px;
+	position: absolute;
+	margin-top: -250px;
+	img {
+		background: $white;
+		padding: 5px;
+	}
+}
+.info-player {
+	padding-top: 50px;
+}
+.name-player {
+	text-align: center;
+	color: $color_emerald_approx;
+	text-transform: capitalize;
+	font-size: 4vw;
+}
+.player {
+	height: 100%;
+	div {
+		text-align: center;
+		text-transform: capitalize;
+		height: 30px;
+		padding: 5px;
+	}
+}
+.desc-player {
+	max-height: 200px;
+	position: relative;
+	overflow: hidden;
+	font-size: 12px;
+	color: $color_dune_approx;
+	padding: 10px 40px;
+}
+.desc-player-text-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 30px 0;
+	background-image: linear-gradient(rgba(255, 255, 255, 0), $white);
+}
+.desc-player-read-more {
+	text-align: center;
+}
+.title-ladder {
+	text-transform: uppercase;
+	font-weight: bold;
+	border-bottom: 1px solid $color_gallery_approx;
+	color: $color_emerald_approx;
+}
+caption {
+	text-align: center;
+	font-weight: bold;
+	font-size: 3vw;
+}
+.ladder {
+	border-bottom: 1px solid $color_gallery_approx;
+}
+.lineheight {
+	line-height: 3.5;
+	span {
+		font-size: 12px;
+		font-weight: bolder;
+		text-transform: capitalize;
+	}
+}
+.team-name {
+	padding-left: 5px;
+}
+.logo-ladder-team {
+	background-size: 50px 50px;
+	background-repeat: no-repeat;
+	padding: 12px 0 10px 16px;
+	color: $white;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 2px 2px 4px $black;
+	font-weight: bolder;
+	font-size: 20px;
+	max-width: 50px;
+	span {
+		color: $white;
+		font-size: 3vw;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 2px 2px 4px $black;
+		text-align: center;
+	}
+	img {
+		background-size: 50px 50px;
+		background-repeat: no-repeat;
+		max-width: 47px;
+		padding: 14px 5px 13px;
+	}
+}
+.name-team {
+	width: 100%;
+	display: inline-block;
+}
+.btn-arrow {
+	background-color: $color_tuna_approx;
+	color: $color_emerald_approx;
+}
+span[data-cal-date] {
+	color: $color_emerald_approx;
+	opacity: 1 !important;
+	font-weight: bold;
+}
+.cal-month-day {
+	height: 50px !important;
+}
+.cal-row-fluid {
+	color: $color_tuna_approx;
+}
+#footer {
+	text-align: center;
+	font-size: 2em;
+	background-color: $color_tuna_approx;
+	padding: 10px;
+}
+.pb-socialicon {
+	padding-top: 6px;
+	font-size: 16px;
+	text-align: center;
+	width: 32px;
+	height: 32px;
+	border: 2px solid $color_emerald_approx;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 50%;
+	color: $color_emerald_approx;
+	&:hover {
+		border: 2px solid $color_emerald_50_approx;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		color: $color_emerald_50_approx;
+	}
+}
+p {
+	margin: 0 0 15px 0;
+}
+.sidebar-box {
+	float: left;
+	width: 250px;
+	margin: 0 20px 0 0;
+	max-height: 120px;
+	position: relative;
+	padding: 20px;
+	overflow: hidden;
+	.read-more {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		margin: 0;
+		padding: 30px 0;
+	}
+}
+.button {
+	border-top: 1px solid $color_cornflower_approx;
+	background: $color_danube_approx;
+	padding: 5px 10px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 8px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: $black 0 1px 0, $black 0 0 10px, $black 0 0 20px, $black 0 0 30px;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: $black_40 0 1px 0;
+	color: $white;
+	font-size: 14px;
+	font-family: $font_1, $font_2;
+	text-decoration: none;
+	vertical-align: middle;
+}
+.search-input:focus {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 1px 1px 0 $color_emerald_approx !important;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all .5s ease-out;
+}
+.nav-push .canvas-inner {
+	right: 80%;
+}
+#social img {
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: all 0.8s ease-in-out;
+}
+.arrow a {
+	display: inline;
+	color: $color_emerald_approx;
+	float: left;
+	font-size: 1.5vw;
+	text-decoration: none;
+}
+.left-arrow a {
+	font-family: $font_0;
+	margin-left: 15px;
+}
+.img-team img {
+	//Instead of the line below you could use @include border-top-left-radius($radius)
+	border-top-left-radius: 50% 50%;
+	//Instead of the line below you could use @include border-top-right-radius($radius)
+	border-top-right-radius: 50% 50%;
+	//Instead of the line below you could use @include border-bottom-right-radius($radius)
+	border-bottom-right-radius: 50% 50%;
+	//Instead of the line below you could use @include border-bottom-left-radius($radius)
+	border-bottom-left-radius: 50% 50%;
+	display: inline;
+}
+.view-more-team a {
+	text-decoration: none;
+	color: $color_emerald_approx;
+}
+.cal-day-weekend span[data-cal-date] {
+	color: $red !important;
+}

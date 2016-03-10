@@ -1,0 +1,44 @@
+<section ng-controller="DetailTeamsController"  class="wow pulse">
+	<div ng-hide="waiting">Waiting.............</div>
+	<div ng-show="waiting" class="banner-detail-team">
+		<div class="container-fluid content-detail-team">
+
+			<div class="row">
+				<div class="col-xs-12 avatar-player">
+					<img ng-src="images/team/{{image}}" alt="" class="img-responsive">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="info-player">
+					<div class="name-player" ng-bind="fullname"></div>
+					<div class="player">
+						<div class="line-team"></div>
+						<div class="row">
+							<div class="col-xs-4">age</div>
+							<div class="col-xs-4">height</div>
+							<div class="col-xs-4">weight</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-4" ng-bind="age"></div>
+							<div class="col-xs-4" ng-bind="height"></div>
+							<div class="col-xs-4" ng-bind="weight"></div>
+						</div>
+						<div class="line-team"></div>
+					</div>
+					<div class="row">
+						<div class="desc-player">
+							<p ng-bind="content"></p>
+							<!-- <p>Malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p> -->
+							
+							
+						</div>
+						
+	                    
+	                </div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>

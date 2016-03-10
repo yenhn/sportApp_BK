@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="transform3d">
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="images/football.ico" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<!-- STYLESHEET -->
+	<link rel="stylesheet" href="libs/css/bootstrap/bootstrap.css">	
+	<link rel="stylesheet" href="libs/css/font-awesome.min.css">
+	<link rel="stylesheet" href="libs/css/wow/animate.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="canvas-outer">
+	<div class="canvas-inner">
+		<header class="header">			
+			<div class="fixToTop">
+				<!-- Tag page -->
+				<div class="tag"><i class="fa fa-chevron-right"><span>detail player</span></i></div>
+				<!-- Button for mobile mode -->
+				<a class="nav-btn"><span>C1</span></a>
+				<!-- Logo -->
+				<a href="index.html" class="nav-brand"><i class="fa fa-futbol-o rotate"></i></a>
+			</div>
+			<div class="container">
+				<!-- Navigation Pane -->
+				<div class="nav-wrap">
+					<ul class="nav">
+						<!-- Search  -->
+						<li class="search-form">
+							<form action="" method="GET">
+								<input type="text" class="search-input" placeholder="Search...."/>
+							</form>
+						</li>
+						<!-- Social -->
+						<div class="social-right">
+							<a href="#"><i class="fa fa-envelope"></i></a>
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+						</div>
+						<!-- Menu panel right	 -->
+						<li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+		                <li><a href="ladder.html"><i class="fa fa-book"></i>Ladder</a></li>
+		                <li><a ui-sref="calendar"><i class="fa fa-calendar-check-o"></i>Calendar</a></li>
+		                <li><a href="team.html"><i class="fa fa-star"></i>Team</a></li>
+					</ul>
+				</div><!-- End Navigation Pane -->
+			</div>
+
+		</header><!-- /header-->
+
+		<section>
+			<div class="banner-detail-team">
+				<div class="content-detail-team">
+					<div class="avatar-player"><img src="images/team/1.jpg" alt="" class="img-responsive"></div>
+					<div class="info-player">
+						<div class="name-player">Yen Hoang</div>
+						<div class="player">
+							<div class="line-team"></div>
+							<div class="row">
+								<div class="col-xs-4">age</div>
+								<div class="col-xs-4">height</div>
+								<div class="col-xs-4">weight</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">27</div>
+								<div class="col-xs-4">155</div>
+								<div class="col-xs-4">45</div>
+							</div>
+							<div class="line-team"></div>
+						</div>
+						<div class="row">
+							<div class="des-player">
+								<p>Robbie Abel returns to the ACT to link up with the Aquis Brumbies following two years as a member of the Western Force Extended Playing Squad (EPS).</p>
+								<p>The 26-year old is a former Brumbies Academy player and was a standout junior in the ACT, playing for renowned Rugby nursery St Edmunds College and forcing his way into the Australian Schoolboys side in 2008.</p>
+								<p>After graduating from school Abel started playing for the Canberra Royals in the John I Dent Cup.</p>
+								<p>Abel took a two year hiatus from rugby in 2010 and 2011 to undertake his Mormon mission before returning to join the Brumbies Academy in 2012 and playing for Northland in the ITM Cup in 2013.</p>
+								<p>Abel impressed with his set piece work from hooker and chipped in with two tries for the side as well, bring his total in two years of playing in the NRC to eight.</p>
+								<p class="desc-player-text-overlay"></p>
+							</div>
+							<div class="desc-player-read-more">
+		                        <i class="icon ion-chevron-down"></i>
+		                    </div>
+		                </div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer id="footer">
+			<div class="container">
+				<div class="row">
+					<a href="" title=""><i class="fa fa-facebook pb-socialicon"></i></a>
+					<a href="" title=""><i class="fa fa-twitter pb-socialicon"></i></a>
+					<a href="" title=""><i class="fa fa-google-plus pb-socialicon"></i></a>
+				</div>
+				<div class="row copyright">Design by: <a href="http://fprotraincsc.pe.hu/" title="">HOANGNGOCYEN</a></div>
+			</div>	
+		</footer>
+
+	</div><!-- canvas inner -->
+</div><!-- canvas outer -->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="libs/js/angular/angular.min.js"></script>
+    <script src="libs/js/angular/angular-route.js"></script>
+    <script src="libs/js/angular/angular-ui-router.min.js"></script>
+    <script src="modules/Module.js"></script>
+    <script src="provider/detailNewsProvider.js"></script>
+    <script src="services/service.js"></script>
+    <script src="controllers/IndexController.js"></script>
+    <script src="directives/directive.js"></script>    
+    <script src="route/route.js"></script>
+    <script src="libs/js/bootstrap/bootstrap.min.js"></script>
+    <script src="libs/js/wow/wow.min.js"></script>
+	<script>
+		/*$(function () {          
+	        $('.nav-btn').on('click', function () {
+	            $('.canvas-outer').toggleClass('nav-push');
+	        });
+	    });*/
+
+	    wow = new WOW(
+	      {
+	        animateClass: 'animated',
+	        offset:       100,
+	        callback:     function(box) {
+	          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+	        }
+	      }
+	    );
+	    wow.init();
+	    
+    </script>
+</body>
+</html>	
