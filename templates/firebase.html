@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="images/football.ico" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- STYLESHEET -->
+	<link rel="stylesheet" href="libs/css/bootstrap/bootstrap.css">	
+	<link rel="stylesheet" href="libs/css/font-awesome.min.css">
+	<link rel="stylesheet" href="libs/css/wow/animate.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="libs/css/owl/owl.carousel.css" rel="stylesheet">
+	<link href="libs/css/calendar/angular-bootstrap-calendar.min.css" rel="stylesheet">
+</head>
+<body ng-app="apptraincsc">
+<div ng-controller="firebase">
+	<p ng-repeat="message in messages">
+		{{message.title}}
+	</p>><br/>
+</div>
+	
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="libs/js/angular/angular.1.5.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+
+	<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/1.1.4/angularfire.min.js"></script>
+    <script src="libs/js/angular/angular-route.js"></script>
+    <script src="libs/js/angular/angular-ui-router.min.js"></script>
+    <script src="libs/js/calendar/angular-animate.js"></script>
+    <script src="libs/js/calendar/moment.min.js"></script>
+    <script src="libs/js/calendar/interact.min.js"></script>
+    <script src="libs/js/calendar/ui-bootstrap-tpls.min.js"></script>
+    <script src="libs/js/calendar/angular-bootstrap-calendar-tpls.min.js"></script>
+	
+    <script src="modules/module.js"></script>
+    <script src="firebase/constant.js"></script>
+    <script src="firebase/services.js"></script>
+    <script src="firebase/controller.js"></script>
+</body>
+</html>

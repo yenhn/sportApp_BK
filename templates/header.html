@@ -1,0 +1,35 @@
+
+	<div class="fixToTop" ng-controller="MenuController">
+		<!-- Tag page -->
+		<div class="tag"><i class="fa fa-chevron-right"><span>{{breadcrumbs}}</span></i></div>
+		<!-- Button for mobile mode -->
+		<!-- <a class="nav-btn" ng-click="showCanvas()" ng-class="myClass"><span>C1</span></a> -->
+		<a class="nav-btn menu-link" href="#menu"><span>C1</span></a>
+		<!-- Logo -->
+		<a ui-sref="news" class="nav-brand"><i class="fa fa-futbol-o rotate"></i></a>
+	</div>
+	<nav class="navigate" id="menu" role="navigation" ng-controller="MenuController">
+		<!-- Navigation Pane -->
+		<div class="nav-wrap">
+			<ul class="nav">
+				<!-- Search -->
+				<li class="search-form">
+					<form action="" method="GET">
+						<input type="text" class="search-input" ng-model="QueryString" ng-change="searchArticle()" placeholder="Search...."/>
+					</form>
+					<span style="color: #fff"> {{count}} </span>
+				</li>
+				<!-- Social -->
+				<div class="social-right">
+					<a href="#"><i class="fa fa-envelope"></i></a>
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+				</div>
+				<!-- Menu panel right -->
+				<li><a ui-sref="news"><i class="fa fa-home"></i>Home</a></li>
+                <li><a ui-sref="ladders"><i class="fa fa-book"></i>Ladder</a></li>
+                <li><a ui-sref="calendar"><i class="fa fa-calendar-check-o"></i>Calendar</a></li>
+                <li><a ui-sref="teams"><i class="fa fa-star"></i>Team</a></li>
+			</ul>
+		</div> <!--End Navigation Pane -->
+	</nav>

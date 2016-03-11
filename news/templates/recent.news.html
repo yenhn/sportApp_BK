@@ -1,0 +1,8 @@
+<div id="demo" ng-controller="NewsCtrl" ng-init="recentNews()">
+    <data-owl-carousel class="owl-carousel" data-options="{autoPlay: 3000, items: 4, itemsDesktop : [1199,3], itemsDesktopSmall: [979,3]}">
+        <div owl-carousel-item="" class="item" ng-repeat="item in listRecentNews | orderBy: '-Post_Date'">
+            <a ui-sref="detail({newsID: item.Id})" title="{{item.Title}}"><img ng-src="images/thumbnews/{{item.ImageUrl}}" alt="{{item.title}}" class="img-responsive"></a>
+            <h4 ng-bind="item.Title"></h4>
+        </div>
+    </data-owl-carousel> 
+</div>

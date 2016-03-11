@@ -1,0 +1,68 @@
+	<div class="container-fluid" ng-controller="LadderCtrl">
+
+		<div class="tit-ladder">
+			<h3 class="caption">OVERALL</h3> 
+			<i class="fa fa-info" data-toggle="modal" data-target=".bs-example-modal-lg"></i>
+		</div>
+		<!-- Large modal -->	
+		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<h4>Information</h4>
+					<table class="table table-condensed"> 
+						<thead> 
+							<tr style="color:#43bf87"> 
+							  <th>Name</th> 
+							  <th>Mean</th> 
+							</tr> 
+						</thead> 
+						<tbody> 
+							<tr> 
+								<th scope="row">PTS</th> 
+								<td>Points</td> 
+							</tr> 
+							<tr> 
+								<th scope="row">P</th> 
+								<td>Played</td> 
+							</tr> 
+							<tr> 
+								<th scope="row">W</th>
+								<td colspan="2">Games Won</td> 
+							</tr> 
+							<tr> 
+								<th scope="row">L</th>
+								<td colspan="2">Games Lost</td> 
+							</tr> 
+							<tr> 
+								<th scope="row">D</th>
+								<td colspan="2">Games Drawn</td> 
+							</tr> 
+						</tbody> 
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="row title-ladder">
+			<div class="col-xs-2" style="max-width: 50px">#</div>
+			<div class="col-xs-4">team</div>
+			<div class="col-xs-1">pts</div>
+			<div class="col-xs-1">p</div>
+			<div class="col-xs-1">w</div>
+			<div class="col-xs-1">l</div>
+			<div class="col-xs-1">d</div>
+		</div>
+		<div class="wow row ladder slideInLeft" ng-repeat="ladder in ladderItems| orderBy: ['-Point', '-Won']">
+			<div class="col-xs-2 logo-ladder-team"  ng-style="{'background-image': 'url(images/ladder/{{ladder.Logo}})'};">
+			{{$index + 1}}
+			</div>
+			<div class="col-xs-4 team-name lineheight">
+				<div ng-class="className(ladder.Background)" ng-bind="ladder.TeamName | split: ladder.TeamName"></div> <span ng-bind="ladder.TeamName"></span> 
+			</div>
+
+			<div class="col-xs-1 lineheight" ng-bind="ladder.Point"></div>
+			<div class="col-xs-1 lineheight" ng-bind="ladder.Plays"></div>
+			<div class="col-xs-1 lineheight" ng-bind="ladder.Won"></div>
+			<div class="col-xs-1 lineheight" ng-bind="ladder.Lost"></div>
+			<div class="col-xs-1 lineheight" ng-bind="ladder.Draws"></div>
+		</div>
+	</div>

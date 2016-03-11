@@ -1,0 +1,17 @@
+<section ng-controller="TeamsCtrl">
+	<div class="wow container-fluid border-team fadeInDownBig" ng-repeat="team in teamsData">
+		<div class="row team">
+			<div class="wow col-xs-6 col-sm-3 img-team bounce">
+				<a ui-sref="player({playerID: team.$id})" title="{{team.image}}"><img ng-src="images/team/{{team.image}}" alt="{{team.image}}" class="img-responsive"></a>
+			</div>
+			<div class="col-xs-6 col-sm-9">
+				<div class="decrip-team">
+					<a ui-sref="player({playerID: team.$id})" title="{{team.fullname}}"><h2 ng-bind="team.fullname"></h2></a>
+					<p ng-bind="team.content"></p>
+				</div>
+				<div class="line-team"></div>
+				<div class="view-more-team"><a ui-sref="player({playerID: team.$id})" title=""><i class="fa fa-angle-double-right"></i> View More</a></div>
+			</div>
+		</div>
+	</div> 
+</section>

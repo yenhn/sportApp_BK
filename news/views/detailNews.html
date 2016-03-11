@@ -1,0 +1,57 @@
+    
+	<div  ng-controller="DetailNewsController" class="container-fluid" ng-style="styles">
+		<div ng-hide="waiting">Waiting..................</div>
+		<div ng-show="waiting" class="wow detail-news zoomIn">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="share" >
+						<img ng-src="images/{{image}}" class="img-responsive" />
+						<!-- <div class="shareicon">
+							<i value='0' onclick="showsocial(this.value)"   class="fa fa-share-alt showsocial">
+                                <div id="social" class="social" style="display: none">
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://vimeo.com/"><i class="fa fa-vine"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.flickr.com/"><i class="fa fa-flickr"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                        	</i>
+						</div> -->								
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="date" ng-bind="post_date | dateFormat: post_date"></div>
+					<h2 ng-bind="title"></h2>
+					<div class="cont-detail-new" ng-bind="content"></div>
+				</div>
+                <!-- <div class="arrow">
+                    <div class="left-arrow"><a href="" title=""><i class="fa fa-long-arrow-left"> Previous News </i></a></div>
+                    <div class="right-arrow"><a href="" title="">Next News <i class="fa fa-long-arrow-right"></i></a></div>
+                </div> -->
+                <div class="single-prev-next">
+                    <a href="#" rel="prev"><i class="fa fa-long-arrow-left"></i> Prev Article</a>              
+                    <a href="#" rel="next">Next Article <i class="fa fa-long-arrow-right"></i></a>            
+                </div>
+			</div>
+			<div class="clear"></div>
+            <div class="line"></div>
+            <div class="container-fluid">
+                <h3>recent news</h3>
+                <!-- Directive for Recent News -->
+                <div class="row" recent-news>                            
+                </div>
+            </div>
+        </div>
+    </div> 
